@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products>
+    <product id="nz">
+        <title>潮流女装</title>
+        <img>images/1.webp</img>
+        <des>最新款的女装</des>
+    </product>
+    <product id="bb">
+        <title>时尚包包</title>
+        <img>images/2.webp</img>
+        <des>鳄鱼牌的时尚包包,仅需三万八</des>
+    </product>
+    <product id="xz">
+        <title>品牌鞋子</title>
+        <img>images/3.webp</img>
+        <des>黄鹤和小姨子跑了,清仓</des>
+    </product>
+</products>

@@ -1,0 +1,17 @@
+{
+  "nz":{
+    "title":"潮流女装",
+    "des":"最新款的女装",
+    "img":"images/1.webp"
+  },
+  "bb":{
+    "title":"时尚包包",
+    "des":"鳄鱼牌的时尚包包,仅需三万八",
+    "img":"images/2.webp"
+  },
+  "xz":{
+    "title":"品牌鞋子",
+    "des":"王八蛋黄鹤和小姨子跑了,清仓",
+    "img":"images/3.webp"
+  }
+}

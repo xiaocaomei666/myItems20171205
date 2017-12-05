@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+        h3, h4{
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+        }
+        .box>div{
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-2.0.0.js"></script>
+    <script src="js/ajaxTool3.js"></script>
+</head>
+<body>
+<div class="box">
+    <h3>类别名称</h3>
+    <h4>描述信息</h4>
+    <img src="images/0.jpg" alt="">
+    <div>
+        <button name="nz">女装</button>
+        <button name="bb">包包</button>
+        <button name="xz">鞋子</button>
+    </div>
+</div>
+<script>
+    //01 获取页面中对应的按钮并且添加点击事件
+    $("button").click(function () {
+
+        //this.getAttribute("name")
+        var nameValue = this.name;
+        //console.log(nameValue);
+
+        //02 发送网络请求获取服务器返回的数据
+        Ajax("get",{
+            obj:{name:nameValue},
+            success:function (xhr) {
+                console.log("成功");
+                //解析服务器返回的xml数据  得到的是XML
+                //服务器返回的数据 :JSON | XML
+                //JSON和XML都是表示数据的一种通用的结构,XML数据相对来说体积更大
+                //XML(HTML)
+                //XML组成部分:文档声明  + 元素(标签对) + 属性
+                //console.log(xhr.responseXML);
+                var resXMl = xhr.responseXML.querySelector("#"+nameValue);
+                console.log(resXMl);
+
+                var title = resXMl.querySelector("title").innerHTML;
+                var img = resXMl.querySelector("img").innerHTML;
+                var des = resXMl.querySelector("des").innerHTML;
+                $("h3").html(title);
+                $("h4").html(des);
+                $("img").attr("src",img);
+            },
+            error:function (xhr) {
+                console.log("失败");
+                console.log(xhr.status);
+            },
+            url:"php/08-ajax-xml.php"
+        })
+    })
+
+    $("button:eq(0)").trigger("click");
+
+
+</script>
+</body>
+</html>

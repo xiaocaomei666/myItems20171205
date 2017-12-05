@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box{
+            width: 320px;
+            height: 480px;
+            margin: 50px auto;
+            border: 1px solid #cccccc;
+        }
+
+        h1{
+            color: #F23D7C;
+            font-size: 18px;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 20px;
+        }
+
+        li{
+            /*height: 30px;*/
+            line-height: 30px;
+            border-top: 1px dashed #cccccc;
+            font-size: 14px;
+        }
+
+        li span
+        {
+            background: #cccccc;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            line-height: 20px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        li:nth-child(-n+3) span
+        {
+            background: #F23D7C;
+        }
+        .content
+        {
+            display: none;
+            overflow: hidden;
+        }
+
+        .content img{
+            width: 80px;
+            height: 110px;
+            margin: 5px;
+            float: left;
+        }
+
+
+        .content p{
+            float: left;
+            width: 210px;
+            font-size: 11px;
+            line-height: 18px;
+            margin-left: 10px;
+        }
+
+        .current .content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>电影排行榜</h1>
+    <ul>
+        <li class="current">
+            <p><span>1</span> 战狼2</p>
+            <div class="content">
+                <img src="filmimage/01.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>2</span> 异形契约</p>
+            <div class="content">
+                <img src="filmimage/02.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>3</span> 战狼1</p>
+            <div class="content">
+                <img src="filmimage/03.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>4</span> 战狗</p>
+            <div class="content">
+                <img src="filmimage/04.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>5</span> 三生三世十里春风</p>
+            <div class="content">
+                <img src="filmimage/05.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>6</span> 贱军大爷</p>
+            <div class="content">
+                <img src="filmimage/06.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>7</span> 睡觉吧,宝宝</p>
+            <div class="content">
+                <img src="filmimage/07.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>8</span> 心里罪</p>
+            <div class="content">
+                <img src="filmimage/08.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>9</span> 哔哩哔哩</p>
+            <div class="content">
+                <img src="filmimage/09.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+        <li>
+            <p><span>10</span> 荆轲拉刺鲁班</p>
+            <div class="content">
+                <img src="filmimage/10.jpg">
+                <p>《间谍同盟》是由美国派拉蒙影业公司出品的动作爱情片，由罗伯特·泽米吉斯执导，布拉德·皮特、玛丽昂·歌迪亚领衔主演。《间谍同盟》以二战为故事背景，讲述了英国特工麦克斯与法国</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    $(function () {
+        //01 监听li标签的鼠标事件(移入和移除)
+        //02 当鼠标进入的时候,给当前的li标签添加class
+        $("li").mouseenter(function () {
+           //console.log("进入");
+            $(this).addClass("current").siblings().removeClass("current");
+        })
+
+
+//        $("li").mouseleave(function () {
+//            console.log("离开");
+//        })
+    })
+</script>
+</body>
+</html>

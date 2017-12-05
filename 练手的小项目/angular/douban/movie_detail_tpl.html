@@ -1,0 +1,28 @@
+<!--加载中-->
+<div style="margin: 200px auto;text-align: center" ng-show="isShowData">
+    <img src="loading.gif" alt="加载中">
+</div>
+
+<!--主要内容-->
+<div ng-hide="isShowData">
+    <h1 ng-bind="detailData.original_title">电影详情</h1>
+
+    <div class="detail_content">
+        <dl class="detail_dl">
+            <dt><img src="{{detailData.images.large}}" width="300px" height="400px"></dt>
+            <dd style="margin-top: 20px;margin-left: 20px;line-height: 35px">
+                <h4>{{detailData.original_title}}</h4>
+                <p>类型: <span ng-repeat="genre in detailData.genres" class="word-room">{{genre}}</span></p>
+                <p>导演: <span ng-repeat="dir in detailData.directors" class="word-room">{{dir.name}}</span></p>
+                <p>主演: <span ng-repeat="cast in detailData.casts" class="word-room">{{cast.name}}</span></p>
+                <p>时长:  <span ng-repeat="dur in detailData.durations" class="word-room">{{dur}}</span></p>
+                <p>语言: <span ng-repeat="languages in detailData.languages" class="word-room">{{languages}}</span></p>
+                <p>上映时间:  <span ng-repeat="time in detailData.pubdates" class="word-room">{{time}}</span></p>
+                <p>标签:  <span ng-repeat="tag in detailData.tags" class="word-room">{{tag}}</span></p>
+                <!--<p>电影简介: <span></span> </p>-->
+                <!--<p>主演: 本.阿弗莱喜克</p>-->
+            </dd>
+        </dl>
+    </div>
+    <div style="font-size: 16px; line-height: 30px">简介：{{detailData.summary}}</div>
+</div>

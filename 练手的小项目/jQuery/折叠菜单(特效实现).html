@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box
+        {
+            width: 300px;
+            height: 216px;
+            border: 1px solid #cccccc;
+            margin: 50px auto;
+            border-radius: 8px;
+        }
+
+        .first>li{
+            line-height: 35px;
+            text-indent: 10px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .first>li:last-child{
+            border-bottom: none;
+        }
+
+        span
+        {
+            width: 16px;
+            height: 16px;
+            background: url("images/arrow_right.png");
+            display: inline-block;
+            float: right;
+            top: 10px;
+            right: 5px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .second{
+            background: #2d2c41;
+            color: #ffffff;
+            display: none;
+        }
+
+
+
+        .second>li{
+            border-bottom: 1px solid #9dbed8;
+        }
+
+        .second>li:hover{
+            background: #d54e53;
+        }
+
+        .cur{
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="first">
+        <li><span></span>一级菜单1
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+        <li><span></span>一级菜单2
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+        <li><span></span>一级菜单3
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+        <li><span></span>一级菜单4
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+        <li><span></span>一级菜单5
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+        <li><span></span>一级菜单6
+            <ul class="second">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+                <li>二级菜单5</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    $(function () {
+        //01 先获取一级菜单添加点击事件
+        $(".first>li").click(function () {
+            //alert(123);
+
+            //02 当点击li标签的时候,应该把当前标签的子标签展开  slideDown
+            $(this).children(".second").slideToggle();
+            //03 旋转箭头图标
+            $(this).children("span").toggleClass("cur");
+
+            //04 当点击其他li标签的时候,兄弟节点应该把子标签收起来 slideUp
+            $(this).siblings().children(".second").slideUp();
+
+            //05 兄弟节点上面的箭头应该恢复(删除cur这个类)
+            $(this).siblings().children("span").removeClass("cur");
+        })
+
+    })
+</script>
+</body>
+</html>

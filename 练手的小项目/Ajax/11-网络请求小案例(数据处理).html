@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+        h3, h4{
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+        }
+        .box>div{
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-2.0.0.js"></script>
+    <script src="js/ajaxTool3.js"></script>
+</head>
+<body>
+<div class="box">
+    <h3>类别名称</h3>
+    <h4>描述信息</h4>
+    <img src="images/0.jpg" alt="">
+    <div>
+        <button name="nz">女装</button>
+        <button name="bb">包包</button>
+        <button name="xz">鞋子</button>
+    </div>
+</div>
+<script>
+    //01 获取页面中对应的按钮并且添加点击事件
+    $("button").click(function () {
+
+        //this.getAttribute("name")
+        var nameValue = this.name;
+        //console.log(nameValue);
+
+        //02 发送网络请求获取服务器返回的数据
+        Ajax("get",{
+            obj:{name:nameValue},
+            success:function (xhr) {
+                console.log("成功");
+
+                //(1) 解析服务器返回的数据
+                //console.log(xhr.responseText);
+                var dataArr = xhr.responseText.split("|");
+                console.log(dataArr);
+
+                //(2) 根据获取到的数据更新页面
+                $("h3").html(dataArr[0]);
+                $("h4").html(dataArr[1]);
+                $("img").attr("src",dataArr[2]);
+            },
+            error:function (xhr) {
+                console.log("失败");
+                console.log(xhr.status);
+            },
+            url:"php/06-ajax-data.php"
+        })
+    })
+
+    $("button:eq(0)").trigger("click");
+
+
+</script>
+</body>
+</html>

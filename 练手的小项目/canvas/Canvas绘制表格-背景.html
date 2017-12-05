@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="900" height="600" style="border: 1px solid #000;"></canvas>
+
+<script>
+    // 1.获取画布和上下文
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // 2.常量
+    var marginXY = 10;
+    // 求出列数和行数
+    var row = canvas.height / marginXY;
+    var col = canvas.width / marginXY;
+    // 3.绘制背景
+    // 绘制水平方向的直线
+    for (var i = 1; i < row; i++) {
+        ctx.moveTo(0,i*marginXY);
+        ctx.lineTo(canvas.width,i*marginXY);
+    }
+
+    // 绘制垂直方向的直线
+    for (var i = 1; i < col; i++) {
+        ctx.moveTo(i*marginXY,0);
+        ctx.lineTo(i*marginXY,canvas.height);
+    }
+
+    // 线条的颜色
+    ctx.strokeStyle = 'red';
+    // 设置线条的宽度
+    ctx.lineWidth = .5;
+    // 绘制
+    ctx.stroke();
+
+    // 4.绘制坐标系
+    // 常量
+    var x0 = 100;
+    var y0 = 500;
+    var maxW = 600;
+    var maxH = 400;
+    ctx.beginPath();
+    //绘制X
+    ctx.moveTo(x0,y0);
+    ctx.lineTo(maxW,y0);
+    ctx.lineTo(maxW - marginXY,y0 - marginXY);
+    ctx.moveTo(maxW - marginXY,y0 + marginXY);
+    ctx.lineTo(maxW,y0);
+
+    //绘制Y
+    ctx.moveTo(x0,y0);
+    ctx.lineTo(x0,y0 - maxH);
+    ctx.lineTo(x0 - marginXY,y0 - maxH + marginXY);
+    ctx.moveTo(x0 + marginXY,y0 - maxH + marginXY);
+    ctx.lineTo(x0,y0 - maxH);
+
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+
+    // 5.绘制折线
+    // 数据
+    var data = [40,20,50,40,80,50,35];
+
+    // 缩放的比例
+    var w = maxW / (data.length + 1);
+    // 1: 100
+    var h = maxH / 100;
+    // 获取所有点的坐标
+    var pointArr = [];
+    for (var i = 0; i < data.length; i++) {
+       pointArr.push(
+           {
+               x : x0 + (i + 1) * w,
+               y : y0 - data[i] * h
+           }
+       )
+    }
+
+    // 绘制
+    ctx.beginPath();
+    // 设置折线的起点
+    ctx.moveTo(x0,y0);
+    // 设置折线的连接点
+    for (var i = 0; i < pointArr.length; i++) {
+       ctx.lineTo(pointArr[i].x,pointArr[i].y)
+    }
+
+    ctx.strokeStyle = 'green';
+    ctx.stroke();
+
+
+</script>
+
+</body>
+</html>

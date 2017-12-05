@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jQuery框架/jquery-2.0.0.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .box{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid red;
+        }
+
+        .box li{
+            width: 142px;
+            height: 142px;
+            border: 1px solid #000;
+            float: left;
+            margin: 10px;
+        }
+
+        .cur{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<button>点击开始抽奖</button>
+<div class="box">
+    <ul>
+        <li><img src="image/1.png"></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+        <li><img src=""></li>
+    </ul>
+</div>
+
+<script>
+    $(function () {
+
+        var goods = {
+            '0':'耳机',
+            '1':'平板电脑',
+            '2':'感谢参与',
+            '3':'平板鞋',
+            '4':'平板鞋',
+            '5':'玩偶',
+            '6':'ipone手机',
+            '7':'noker手机',
+            '8':'感谢参与'
+        };
+
+        //01 使用js代码的方式来加载图片
+        $("li").each(function (index,dom) {
+
+            if (index == 8)
+            {
+                index =2;
+            }
+            var imgPath = "image/" + (index + 1) + ".png";
+            $(this).children("img").attr("src",imgPath);
+        });
+
+        $("button").click(function () {
+            //02 计算得到随机数
+            var count = Math.floor(Math.random() * 9) + 9;
+            console.log(count);
+
+            var currentIndex = 0;
+            //03 开启定时器
+            var timer = setInterval(function () {
+                count --;
+                if (count == 0)
+                {
+                    clearInterval(timer);
+                    console.log(currentIndex);
+                    alert(goods[currentIndex]);
+                    return;
+                }
+
+                currentIndex ++;
+                if (currentIndex == 9)
+                {
+                    currentIndex = 0;
+                }
+
+                $("li").eq(currentIndex).addClass("cur").siblings().removeClass("cur");
+
+            },100);
+
+        })
+
+
+    })
+</script>
+</body>
+</html>

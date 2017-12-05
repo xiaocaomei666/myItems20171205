@@ -1,0 +1,52 @@
+<!--疯狂加载-->
+<div style="text-align: center;margin: 300px auto" ng-show="isShow"><img src="load.gif" alt="疯狂加载中"></div>
+
+<!--main-->
+<div ng-hide="isShow">
+    <h1>{{movieData.title}}</h1>
+    <div class="list">
+        <a href="#!/detail/{{item.id}}" ng-repeat="item in movieData.subjects">
+            <dl>
+                <dt><img src="{{item.images.small}}" alt=""></dt>
+                <dd>
+                    <h4>{{item.title}}</h4>
+                    <p>类型: <span ng-repeat="genre in item.genres" class="word-room">{{genre}}</span></p>
+                    <p>导演: <span ng-repeat="dir in item.directors" class="word-room">{{dir.name}}</span></p>
+                    <p>主演: <span ng-repeat="cast in item.casts" class="word-room">{{cast.name}}</span></p>
+                </dd>
+                <span class="score">{{item.rating.average}}分</span>
+            </dl>
+        </a>
+        <!--<a href="#">-->
+            <!--<dl>-->
+                <!--<dt><img src="img.png" alt=""></dt>-->
+                <!--<dd>-->
+                    <!--<h4>蝙蝠侠大战超人:正义黎明</h4>-->
+                    <!--<p>类型: 动作,科幻,奇幻</p>-->
+                    <!--<p>导演: 扎克波克</p>-->
+                    <!--<p>主演: 本.阿弗莱喜克</p>-->
+                <!--</dd>-->
+                <!--<span class="score">42分</span>-->
+            <!--</dl>-->
+        <!--</a>-->
+
+        <!--<a href="#">-->
+            <!--<dl>-->
+                <!--<dt><img src="img.png" alt=""></dt>-->
+                <!--<dd>-->
+                    <!--<h4>蝙蝠侠大战超人:正义黎明</h4>-->
+                    <!--<p>类型: 动作,科幻,奇幻</p>-->
+                    <!--<p>导演: 扎克波克</p>-->
+                    <!--<p>主演: 本.阿弗莱喜克</p>-->
+                <!--</dd>-->
+                <!--<span class="score">42分</span>-->
+            <!--</dl>-->
+        <!--</a>-->
+    </div>
+
+    <div class="page">
+        <a href="#">上一页</a>
+        <a href="#">下一页</a>
+    </div>
+</div>
+

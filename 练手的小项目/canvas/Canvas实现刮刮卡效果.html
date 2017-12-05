@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            background: url("images/p_1.jpg");
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="320" height="160" style="border: 1px solid #000;"></canvas>
+
+<script>
+    // 1.获取画布和上下文
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // 2.绘制蒙板
+    ctx.fillStyle = '#ccc';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    // 只保留目标,保留与源不重叠区域的目标
+    ctx.globalCompositeOperation = 'destination-out';
+    // 3.监听鼠标按下
+    canvas.onmousedown = function () {
+        canvas.onmousemove = function (e) {
+            // 绘制圆
+            ctx.arc(e.offsetX,e.offsetY,20,0,2*Math.PI);
+//            ctx.fillStyle = 'red';
+            ctx.fill();
+        }
+
+        canvas.onmouseup = function () {
+            canvas.onmousemove = null;
+            canvas.onmouseup = null;
+        }
+    }
+
+</script>
+
+</body>
+</html>
