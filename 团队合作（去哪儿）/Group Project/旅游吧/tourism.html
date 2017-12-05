@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/tourism.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.suggestion.js"></script>
+    <script src="js/jquery.citys.js"></script>
+    <script src="js/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <script src="js/my_Function.js"></script>
+    <script src="js/tourism.js"></script>
+</head>
+<body>
+<div class="x-content">
+    <!--导航-->
+    <div class="nav">
+        <div class="nav_top">
+            <div class="top_left">
+                <span>去旅游，到这儿！</span>
+            </div>
+            <div class="top_right">
+                <a href="../login.html" class="login">登录 &nbsp;&nbsp;|</a>
+                <a href="../reg.html" class="reg">&nbsp;&nbsp;注册</a>
+            </div>
+        </div>
+        <div class="nav_center">
+            <img src="images/logo.png" alt="">
+            <div class="center_center">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li class="slideDown">旅游
+                        <ul >
+                            <li><a href = "../tour/tour.html">跟团</a></li>
+                            <li><a href="../self_travel/index.html">  自助游</a></li>
+                        </ul>
+                    </li>
+                    <li><a href = "../strategy/strategy.html">攻略</a></li>
+                    <li><a href="../login.html">个人中心</a></li>
+                </ul>
+            </div>
+            <div class="find">
+                <form action="http://www.baidu.com/s" target="_blank">
+                    <input type="text" placeholder="请输入景点名或城市名" class="input-text" name="word">
+                    <input type="submit" class="input-submit" value="">
+                </form>
+
+            </div>
+        </div>
+        <div class="nav_bottom"> 首页 > 旅游</div>
+
+    </div>
+    <!--头部-->
+    <div class="header">
+        <p>高品质团游   &nbsp;广州到昆明、大理、丽江、玉龙雪山、蓝月谷、</p>
+        <p>束河古城、独克宗古城、香格里拉</p>
+    </div>
+    <!--图片和价格展示-->
+    <div class="show">
+        <div class="pic">
+            <div class="pic_show">
+                <ul class="pic_ul">
+                    <li><img src="images/x1.jpg" alt=""></li>
+                    <li><img src="images/x6.jpg" alt=""></li>
+                    <li><img src="images/x5.jpg" alt=""></li>
+                    <li><img src="images/x1.jpg" alt=""></li>
+                </ul>
+            </div>
+
+            <div class="flash">
+                <span class="flash_l">&lt;</span>
+                <span class="flash_r">&gt;</span>
+                <ul class="uul">
+                    <li class="scale_pic"><img src="images/x1.jpg" alt=""></li>
+                    <li><img src="images/x6.jpg" alt=""></li>
+                    <li><img src="images/x5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="money">
+            <div class="money_top">
+                <span>价格：</span>
+                <span class = "sp2">￥<span class="red">2390&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </span>
+                <span>第三方分期：￥<span class="red">178</span> / 期起</span>
+            </div>
+            <div class="money_form">
+                <form action="">
+                    <div class="start_city">
+                            <p>
+                                <span>出发地点 </span><select name="province"><option value=""> - 请选择 - </option><option value="110000" data-code="110000">北京市</option><option value="120000" data-code="120000">天津市</option><option value="130000" data-code="130000">河北省</option><option value="140000" data-code="140000">山西省</option><option value="150000" data-code="150000">内蒙古自治区</option><option value="210000" data-code="210000">辽宁省</option><option value="220000" data-code="220000">吉林省</option><option value="230000" data-code="230000">黑龙江省</option><option value="310000" data-code="310000">上海市</option><option value="320000" data-code="320000">江苏省</option><option value="330000" data-code="330000">浙江省</option><option value="340000" data-code="340000">安徽省</option><option value="350000" data-code="350000">福建省</option><option value="360000" data-code="360000">江西省</option><option value="370000" data-code="370000">山东省</option><option value="410000" data-code="410000">河南省</option><option value="420000" data-code="420000">湖北省</option><option value="430000" data-code="430000">湖南省</option><option value="440000" data-code="440000">广东省</option><option value="450000" data-code="450000">广西壮族自治区</option><option value="460000" data-code="460000">海南省</option><option value="500000" data-code="500000">重庆市</option><option value="510000" data-code="510000">四川省</option><option value="520000" data-code="520000">贵州省</option><option value="530000" data-code="530000">云南省</option><option value="540000" data-code="540000">西藏自治区</option><option value="610000" data-code="610000">陕西省</option><option value="620000" data-code="620000">甘肃省</option><option value="630000" data-code="630000">青海省</option><option value="640000" data-code="640000">宁夏回族自治区</option><option value="650000" data-code="650000">新疆维吾尔自治区</option><option value="710000" data-code="710000">台湾省</option><option value="810000" data-code="810000">香港特别行政区</option><option value="820000" data-code="820000">澳门特别行政区</option></select>
+                                <select name="city" style="display: none;"></select>
+                                <select name="area" disabled=""><option value=""> - 请选择 - </option></select>
+                            </p>
+                            <p id="place">请选择地区</p>
+                    </div>
+                    <p><span class="go_to">出行时间</span> <input type="text"  class="input_time"></p>
+                    <div class="input_phone"><span>验证码</span> <input type="text"> <button id="reg_num">点击获取手机验证码</button></div>
+                </form>
+                <div class="pay">
+                    扫码支付
+                    <img src="images/x4.png" alt="">
+                </div>
+                <button class="book">立即预定</button>
+            </div>
+            <div class="money_des">
+                <p>
+                    <span style="color:tomato;font-weight: 600">行程概要：</span>
+                    丽江 → 宁蒗 → 泸沽湖 → 丽江出发 → 泸沽湖观景台 → 摩梭民俗家访 → 划猪槽船游湖观光 → 参加原生态篝火晚会 → 国际湿地公园 →
+                <span id="des_more">
+                    泸沽湖 → 宁蒗 → 丽江
+   泸沽湖客栈出发 → 情人沙滩湾 → 里格观景台 → 尼赛村 → 泸源崖 → 泸沽湖镇 → 环湖至草海、徒步走婚桥 → 返回丽江
+                </span>
+                </p>
+               <p id = "des_on">详情 &gt;</p>
+            </div>
+        </div>
+    </div>
+    <!--中部切换区域-->
+    <div class="tog">
+        <div class="tog_tag">
+            <ul class="oul">
+                <li class="current">行程具体</li>
+                <li>游客点评</li>
+                <li>百度地图</li>
+                <!--<li>在线问答</li>-->
+                <li>排忧解难</li>
+            </ul>
+        </div>
+        <div class="des">
+            <!--行程具体-->
+            <div class="go_des">
+                <ul class="ul_des">
+                    <li>
+                        <p>D1</p>
+                        <p>出发地昆明</p>
+                        <p>行程描述</p>
+                        <p>造物主把一切最原始、最纯粹的美好都赋予了这个美丽的地方——云南！雄伟的玉龙雪山、多情的丽江、秘境香格里拉……无不显示出自然的瑰丽神奇。当秋意渐浓，冬日临近时，云南的颜色更艳了，风情更浓了，绽放的花儿正在向您挥手……</p>
+                        <p>按照出团通知的航班要求自行前往机场，携带有效证件自行办理乘机手续，乘机飞抵昆明长水机场。我们的工作人员在机场专门柜台等待您的到来（接站方式以工作人员通知为准）。</p>
+                        <p>接到您之后，在机场VIP接待厅登记办理手续，随机安排商务专车送至酒店休息，机场至酒店沿途尽享昆明美景。</p>
+                        <p>牛宝温馨提示：</p>
+                        <p> &nbsp;此行程支持自选航班，建议您不要选择太晚抵达的航班，有充足的时间可以自行前往昆明市逛逛翠湖、陆军讲武堂、金马碧鸡坊等标志性景点。云南的形成大多车程较长，出发较早，宠物的睡眠是舒适旅游体验的保障。</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;云南紫外线较强，早晚温差大，请贵宾出行前备好防晒霜，建议准备轻便的外套，即时添加衣服，确保旅行期间身体舒适。</p>
+                        <p>&nbsp;客人入住需要现付押金，押金数额在200元/间--1000元/间，具体金额当天酒店前台告知，牛宝提醒您保留好押金条，第二天退房时凭押金条退换押金。</p>
+                        <p>三餐</p>
+                        <p> 早餐：敬请自理 &nbsp;&nbsp;  午餐：敬请自理 &nbsp;&nbsp;  晚餐：敬请自理</p>
+                        <p style="margin-top: 10px;">住宿</p>
+                        <p>绿洲大酒店、昆明中玉酒店 、昆明泰丽国际酒店 、昆明新纪元大酒店 、昆明滇池温泉花园国际大酒店 、昆明官渡大酒店 、昆明新南疆酒店 、昆明樱花酒店 、昆明怡景园度假酒店 、昆明希桥酒店 ……</p>
+                    </li>
+                    <li>
+                        <p>D2</p>
+                        <p>出发地丽江</p>
+                        <p>行程描述</p>
+                        <p>造物主把一切最原始、最纯粹的美好都赋予了这个美丽的地方——云南！雄伟的玉龙雪山、多情的丽江、秘境香格里拉……无不显示出自然的瑰丽神奇。当秋意渐浓，冬日临近时，云南的颜色更艳了，风情更浓了，绽放的花儿正在向您挥手……</p>
+                        <p>按照出团通知的航班要求自行前往机场，携带有效证件自行办理乘机手续，乘机飞抵昆明长水机场。我们的工作人员在机场专门柜台等待您的到来（接站方式以工作人员通知为准）。</p>
+                        <p>接到您之后，在机场VIP接待厅登记办理手续，随机安排商务专车送至酒店休息，机场至酒店沿途尽享昆明美景。</p>
+                        <p>牛宝温馨提示：</p>
+                        <p> &nbsp;此行程支持自选航班，建议您不要选择太晚抵达的航班，有充足的时间可以自行前往昆明市逛逛翠湖、陆军讲武堂、金马碧鸡坊等标志性景点。云南的形成大多车程较长，出发较早，宠物的睡眠是舒适旅游体验的保障。</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;云南紫外线较强，早晚温差大，请贵宾出行前备好防晒霜，建议准备轻便的外套，即时添加衣服，确保旅行期间身体舒适。</p>
+                        <p>&nbsp;客人入住需要现付押金，押金数额在200元/间--1000元/间，具体金额当天酒店前台告知，牛宝提醒您保留好押金条，第二天退房时凭押金条退换押金。</p>
+                        <p>三餐</p>
+                        <p>早餐：敬请自理 &nbsp;&nbsp;  午餐：敬请自理 &nbsp;&nbsp;  晚餐：敬请自理</p>
+                        <p style="margin-top: 5px;">住宿</p>
+                        <p>绿洲大酒店、昆明中玉酒店 、昆明泰丽国际酒店 、昆明新纪元大酒店 、昆明滇池温泉花园国际大酒店 、昆明官渡大酒店 、昆明新南疆酒店 、昆明樱花酒店 、昆明怡景园度假酒店 、昆明希桥酒店 ……</p>
+                    </li>
+                    <li>
+                        <p>D3</p>
+                        <p>出发地束河古镇</p>
+                        <p>行程描述</p>
+                        <p>束河是纳西先民在丽江坝子中最早的聚居地之一，束河古镇这里有各色各样的酒吧、茶馆、饭店、商店和客栈，中餐、西餐、各地的小吃都有，选择很多，很方便，价格也合理。</p>
+                        <p>朦胧中束河景致更让我心旷神怡。到处都是古朴的自然本色，青青的石板路，让我忍不住想脱掉鞋子，感受着她的圆润…… </p>
+                        <p>接到您之后，在机场VIP接待厅登记办理手续，随机安排商务专车送至酒店休息，机场至酒店沿途尽享昆明美景。</p>
+                        <p>牛宝温馨提示：</p>
+                        <p> &nbsp;此行程支持自选航班，建议您不要选择太晚抵达的航班，有充足的时间可以自行前往昆明市逛逛翠湖、陆军讲武堂、金马碧鸡坊等标志性景点。云南的形成大多车程较长，出发较早，宠物的睡眠是舒适旅游体验的保障。</p>
+                        <p style="margin-top: 10px">&nbsp;第一天全国各地飞昆明，由于大家行程航班不一，会存在等待其他团友的情况，最晚不超过30分钟，较介意的朋友可自行打车前往酒店，费用自理。</p>
+                        <p style="margin-top: 10px">&nbsp;朦胧中束河景致更让我心旷神怡。到处都是古朴的自然本色，青青的石板路，让我忍不住想脱掉鞋子，感受着她的圆润…… </p>
+                        <p>&nbsp;客人入住需要现付押金，押金数额在200元/间--1000元/间，具体金额当天酒店前台告知，牛宝提醒您保留好押金条，第二天退房时凭押金条退换押金。</p>
+                        <p>三餐</p>
+                        <p style="margin-bottom: 10px">早餐：敬请自理 &nbsp;&nbsp; 午餐：敬请自理 &nbsp;&nbsp;晚餐：敬请自理</p>
+                        <p>装备：决定着你的睡眠</p>
+                        <p> 有了良好的装备，才能玩得舒适，才有一个好的睡眠，有好的睡眠才能玩得更好了，去云南必须准备这些物品：锋衣、防晒霜
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!--游客点评-->
+            <div class="tour_des">
+                <div class="container">
+                    <div class="demo">
+                        <div class="stars">
+                            <p>对导游评价：</p>
+                            <p> &nbsp;一颗星：&hearts; <span>很差, 导游？不存在的.自己玩。</span> &nbsp;&nbsp;两颗星：&hearts;&hearts; <span>一般, 这导游有待提高啊</span></p>
+                            <p> &nbsp;三颗星：&hearts;&hearts;&hearts; <span> 好, 导游还行，还过得去</span> &nbsp; &nbsp; &nbsp;四颗星：&hearts;&hearts;&hearts;&hearts; <span>很好, 导游不错，继续加油</span></p>
+                            <p> &nbsp;五颗星：&hearts;&hearts;&hearts;&hearts;&hearts; <span>非常好, 这么好的导游可以来一打</span> </p>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                        </div>
+                        <div class="stars">
+                            <p>酒店服务评价：</p>
+                            <p> &nbsp;一颗星：&hearts; <span>很差, 这家有服务吗！？</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;两颗星：&hearts;&hearts; <span>一般，态度较差，不能解决问题</span></p>
+                            <p> &nbsp;三颗星：&hearts;&hearts;&hearts; <span>好, 客服反应慢，附加服务较少</span> &nbsp;&nbsp;&nbsp;四颗星：&hearts;&hearts;&hearts;&hearts; <span>很好, 不错，附加服务多多,客服热情</span></p>
+                            <p> &nbsp;五颗星：&hearts;&hearts;&hearts;&hearts;&hearts; <span>非常好, 附加服务全面，需要的都有</span> </p>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                        </div>
+                        <div class="stars">
+                            <p>本次旅行满意度：</p>
+                            <p> &nbsp;一颗星：&hearts; <span>很差, 以后不会再来了,旅行一般</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两颗星：&hearts;&hearts; <span>一般, 价格没优势,还行</span></p>
+                            <p> &nbsp;三颗星： &hearts;&hearts;&hearts;  <span>好, 特价时能看看,经常去的那里了</span> &nbsp;&nbsp; 四颗星：&hearts;&hearts;&hearts;&hearts; <span>很好, 相当不错,目前买同类产品最好的一家了</span></p>
+                            <p> &nbsp;五颗星：&hearts;&hearts;&hearts;&hearts;&hearts; <span>非常好, 货品全，折扣大，不砍单</span></p>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                            <img src="images/star_gray.png"/>
+                        </div>
+                        <button class="comment_btn">提交我的评价</button>
+                    </div>
+                </div>
+            </div>
+            <!--百度地图-->
+            <div class="place_des">
+                <div id="dituContent"></div>
+            </div>
+            <!--相关产品-->
+            <!--<div class="thing_des">-->
+                <!--相关产品-->
+            <!--</div>-->
+            <!--排忧解难-->
+            <div class="que_des">
+                <div class="luck">
+                    <p>还在纠结不知道去哪里玩耍？让我来帮你决定吧！&hearts;</p>
+                    <p><button id = "btn_luck">心动不如行动</button></p>
+                    <div class="luck_box">
+                        <ul class="luck_ul">
+                            <li><img src="images/x-1.png" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="mask_div">
+                    <ul class="mask_ul">
+                        <li>
+                            <div><img src="images/x-1.png" alt=""></div>
+                            <h5>束河古镇</h5>
+                            <span>束河是纳西先民在丽江坝子中最早的聚居地之一，束河古镇这里有各色各样的酒吧、茶馆、饭店、商店和客栈，中餐、西餐、各地的小吃都有，选择很多，很方便，价格也合理。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-2.png" alt=""></div>
+                            <h5>松赞林寺</h5>
+                            <span>噶丹·松赞林寺是云南省规模最大的藏传佛教寺院，也是康区有名的大寺院之一，还是川滇一带的黄教中心，在整个藏区都有着举足轻重的地位，被誉为“小布达拉宫”。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-3.png" alt=""></div>
+                            <h5>喜洲</h5>
+                            <span>喜洲镇位于大理市北部，西倚苍山，东临洱海，隋唐时期称“大厘城”，是南诏时期“十睑之一”，是电影“五朵金花”的故乡，云南省著名的历史文化名镇和重点侨乡之一。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-4.png" alt=""></div>
+                            <h5>苍山洱海</h5>
+                            <span>“下关风，上关花，苍山雪，洱海月” 是这里迤逦风光的四大景致。洱海到苍山之间是一片扇形的冲击平坝，这里田地肥沃、村落相连，崇圣寺三塔笔立挺拔，素有“风景画廊”之称，风光、名胜、民俗融为一体。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-5.png" alt=""></div>
+                            <h5>玉龙雪山</h5>
+                            <span>玉龙雪山在纳西语中被称为“欧鲁”，意为银色的山岩。其十三座雪峰连绵不绝，宛若一条“巨龙”腾越飞舞，故称为“玉龙”。又因其岩性主要为石灰岩与玄武岩，黑白分明，所以又称为“黑白雪山”。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-6.png" alt=""></div>
+                            <h5>崇圣寺三塔</h5>
+                            <span>崇圣寺三塔位于大理古城西北部1.5公里处，西对苍山应乐峰，东对洱海，距山脚约为1500米。南336米处有桃溪向东流过。北76米处有梅溪，东靠滇藏公路。三塔由一大二小三阁组成。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-7.png" alt=""></div>
+                            <h5>基诺山寨</h5>
+                            <span>基诺山寨景区以巴坡自然村寨为依托，将基诺族浓郁的民族风情、历史文化、神秘的原始宗教文化、古朴的生产生活方式、服饰及秀美的自然风光融为一体展现给游客……引人入胜，让人留连忘返</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-8.png" alt=""></div>
+                            <h5>望天树</h5>
+                            <span>望天树，别名擎天树，大乔木，高40-60米，胸径60-150厘米；树皮灰色或棕褐色，树干上部的为浅纵裂，草包下部呈块状剥落。</span>
+                        </li>
+                        <li>
+                            <div><img src="images/x-9.png" alt=""></div>
+                            <h5>挖色镇</h5>
+                            <span>三面环山，一面临海，西对如屏苍山而遥望大理古城，东通佛教胜地鸡足山而隐窥金顶，自古即为洱海东岸一个美丽富饶的鱼米之乡，是洱海地区历史渊源长远的白族本土文化发源地之一。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--序号123-->
+        <div class="ool">
+            <ol class="Ool">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                …
+            </ol>
+        </div>
+        <p>联系我们&nbsp;|&nbsp;免责声明&nbsp;|&nbsp;意见反馈&nbsp;|&nbsp;旅行社加盟</p>
+
+    </div>
+    <!--回到顶部-->
+    <div class="container">
+        <div class="demo">
+            <div id="service">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" class="weixin_area">
+                            <img src="images/l02.png" width="47" height="49" class="shows" />
+                            <img src="images/a.png" width="57" height="49" class="hides" />
+                            <img src="images/weixin.jpg" width="145px" class="weixin" style="display:none;margin:-100px 57px 0 0" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <div class="hides" style="width:161px;display:none;" id="qq">
+                                <div class="hides" id="aa">
+                                    <img src="images/ll04.png">
+                                </div>
+                                <div class="hides" id="p2"><span style="color:#FFF;font-size:13px">小草莓</span>
+                                </div>
+                            </div>
+                            <img src="images/l04.png" width="47" height="49" class="shows" />
+                        </a>
+                    </li>
+                    <li id="tel">
+                        <a href="javascript:void(0)">
+                            <div class="hides" style="width:161px;display:none;" id="tels">
+                                <div class="hides" id="p11">
+                                    <img src="images/ll05.png">
+                                </div>
+                                <div class="hides" id="p3"><span style="color:#FFF;font-size:12px">18813299693</span>
+                                </div>
+                            </div>
+                            <img src="images/l05.png" width="47" height="49" class="shows" />
+                        </a>
+                    </li>
+                    <li id="btn">
+                        <a id="top_btn">
+                            <div class="hides" style="width:161px;display:none">
+                                <img src="images/ll06.png" width="161" height="49" />
+                            </div>
+                            <img src="images/l06.png" width="47" height="49" class="shows" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

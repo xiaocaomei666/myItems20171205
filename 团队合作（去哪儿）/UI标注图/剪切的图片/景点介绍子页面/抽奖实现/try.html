@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .luck{
+            width: 80%;
+            height: 680px;
+            background-color: #ffb5b8;
+            margin: auto;
+        }
+        .luck p{
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+        }
+        .luck button{
+            border: none;
+            width: 150px;
+            height: 50px;
+            color: white;
+            background-color: tomato;
+            border-radius: 15px;
+            font-size: 23px;
+        }
+        .luck .luck_box{
+            width: 840px;
+            height: 605px;
+            /*padding-left: 10px;*/
+            /*padding-top: 50px;*/
+            margin: auto;
+            border: 1px solid tomato;
+        }
+        .luck .luck_box .luck_ul{
+            width: 840px;
+            height: 530px;
+        }
+        .luck .luck_box .luck_ul li{
+            margin: 10px;
+            border: 1px solid #000;
+            /*border-right:1px solid #cccccc;*/
+            width: 260px;
+            height: 180px;
+            float: left;
+            /*margin-right: 10px;*/
+            /*margin-bottom: 7px;*/
+            text-align: center;
+            /*border: 1px solid #000;*/
+            /*padding: 20px;*/
+            padding-top: 25px;
+        }
+        .luck .luck_box .luck_ul img{
+            width: 200px;
+            height: 120px;
+        }
+        .luck_choose{
+            background: red;
+        }
+        .mask_div{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 181, 184, 0.5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .mask_div .mask_ul{
+            width: 800px;
+            height: 500px;
+            background-color: white;
+            margin: 80px auto;
+            display: none;
+        }
+        .mask_div .mask_ul li{
+            display: none;
+        }
+        .mask_div .mask_ul li>h5{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 15px;
+            display: none;
+        }
+        .mask_div .mask_ul li span{
+            display: inline-block;
+            line-height: 30px;
+            margin:8px 40px;
+        }
+        .mask_div .mask_ul li>div{
+            text-align: center;
+            padding-top: 50px;
+        }
+        .mask_div .mask_ul img{
+            width: 420px;
+            height: 302px;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/try.js"></script>
+</head>
+<body>
+<div class="luck">
+    <p>还在纠结不知道去哪里玩耍？让我来帮你决定吧！&hearts;</p>
+    <p><button id = "btn_luck">心动不如行动</button></p>
+    <div class="luck_box">
+        <ul class="luck_ul">
+            <li><img src="images/x-1.png" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+
+</div>
+<div class="mask_div">
+    <ul class="mask_ul">
+        <li>
+            <div><img src="images/x-1.png" alt=""></div>
+            <h5>束河古镇</h5>
+            <span>束河是纳西先民在丽江坝子中最早的聚居地之一，束河古镇这里有各色各样的酒吧、茶馆、饭店、商店和客栈，中餐、西餐、各地的小吃都有，选择很多，很方便，价格也合理。</span>
+        </li>
+        <li>
+            <div><img src="images/x-2.png" alt=""></div>
+            <h5>松赞林寺</h5>
+            <span>噶丹·松赞林寺是云南省规模最大的藏传佛教寺院，也是康区有名的大寺院之一，还是川滇一带的黄教中心，在整个藏区都有着举足轻重的地位，被誉为“小布达拉宫”。</span>
+        </li>
+        <li>
+            <div><img src="images/x-3.png" alt=""></div>
+            <h5>喜洲</h5>
+            <span>喜洲镇位于大理市北部，西倚苍山，东临洱海，隋唐时期称“大厘城”，是南诏时期“十睑之一”，是电影“五朵金花”的故乡，云南省著名的历史文化名镇和重点侨乡之一。</span>
+        </li>
+        <li>
+            <div><img src="images/x-4.png" alt=""></div>
+            <h5>苍山洱海</h5>
+            <span>“下关风，上关花，苍山雪，洱海月” 是这里迤逦风光的四大景致。洱海到苍山之间是一片扇形的冲击平坝，这里田地肥沃、村落相连，崇圣寺三塔笔立挺拔，素有“风景画廊”之称，风光、名胜、民俗融为一体。</span>
+        </li>
+        <li>
+            <div><img src="images/x-5.png" alt=""></div>
+            <h5>玉龙雪山</h5>
+            <span>玉龙雪山在纳西语中被称为“欧鲁”，意为银色的山岩。其十三座雪峰连绵不绝，宛若一条“巨龙”腾越飞舞，故称为“玉龙”。又因其岩性主要为石灰岩与玄武岩，黑白分明，所以又称为“黑白雪山”。</span>
+        </li>
+        <li>
+            <div><img src="images/x-6.png" alt=""></div>
+            <h5>崇圣寺三塔</h5>
+            <span>崇圣寺三塔位于大理古城西北部1.5公里处，西对苍山应乐峰，东对洱海，距山脚约为1500米。南336米处有桃溪向东流过。北76米处有梅溪，东靠滇藏公路。三塔由一大二小三阁组成。</span>
+        </li>
+        <li>
+            <div><img src="images/x-7.png" alt=""></div>
+            <h5>基诺山寨</h5>
+            <span>基诺山寨景区以巴坡自然村寨为依托，将基诺族浓郁的民族风情、历史文化、神秘的原始宗教文化、古朴的生产生活方式、服饰及秀美的自然风光融为一体展现给游客……引人入胜，让人留连忘返</span>
+        </li>
+        <li>
+            <div><img src="images/x-8.png" alt=""></div>
+            <h5>望天树</h5>
+            <span>望天树，别名擎天树，大乔木，高40-60米，胸径60-150厘米；树皮灰色或棕褐色，树干上部的为浅纵裂，草包下部呈块状剥落。</span>
+        </li>
+        <li>
+            <div><img src="images/x-9.png" alt=""></div>
+            <h5>挖色镇</h5>
+            <span>三面环山，一面临海，西对如屏苍山而遥望大理古城，东通佛教胜地鸡足山而隐窥金顶，自古即为洱海东岸一个美丽富饶的鱼米之乡，是洱海地区历史渊源长远的白族本土文化发源地之一。</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

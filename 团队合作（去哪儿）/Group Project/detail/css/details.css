@@ -1,0 +1,284 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background: url("../images/pbg.jpg") fixed;
+    background-size: 100%;
+}
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.box{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(	192,192,192, 0.6);
+}
+.header{
+    width: 1000px;
+    height: 96px;
+    background-color: white;
+}
+.top{
+    width:100%;
+    height: 26px;
+    font-size: 10px;
+}
+.top span:nth-child(1){
+    float: left;
+    margin:5px 16px;
+}
+.top span:nth-child(3){
+    float: right;
+    margin-top: 5px;
+}
+.top a{
+    float: right;
+    margin:5px 16px;
+}
+.logo{
+    width: 100%;
+    height: 50px;
+    background-color: aliceblue;
+}
+.logo>img{
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    float: left;
+    margin:0 20px;
+}
+.logo>ul{
+    width: 400px;
+    height: 50px;
+    float: left;
+}
+.logo>ul>li{
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+.choose{
+    background:url("../images/pb.png");
+}
+.logo>ul>li>span{
+    float: right;
+}
+.search{
+    width: 250px;
+    height: 30px;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    margin: 10px 0;
+    float: left;
+}
+.sub{
+    width: 70px;
+    height: 30px;
+    background: orange;
+    position: relative;
+    margin: 10px 0;
+    float:left;
+    cursor: pointer;
+    text-align: center;
+}
+.ctop{
+    width: 1000px;
+    height: 20px;
+    font-size: 14px;
+    background-color: blanchedalmond;opacity:0.8;
+}
+.ctop>p{
+    float: left;
+    margin-left: 16px;
+}
+.center{
+    width: 980px;
+    height: 1884px;
+    margin: 5px 10px;
+    position: relative;
+}
+.first-pic{
+    width: 980px;
+    height:474px;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.dilicous{
+    width: 4900px;
+    height:474px;
+    position: absolute;
+}
+.dilicous li{
+    width: 980px;
+    height:474px;
+    float: left;
+}
+.dilicous li img{
+    width: 980px;
+    height:474px;
+}
+.first-pic span{
+    width: 38px;
+    height: 75px;
+    position: absolute;
+    display: none;
+    margin-top:200px;
+}
+.tleft{
+    float: left;
+    left:20px;
+
+}
+.tright{
+    float: right;
+    right: 20px;
+}
+.ols{
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 390px;
+    text-align: center;
+}
+.ols li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    margin:0 14px ;
+    float: left;
+}
+.color{
+    background: red;
+}
+.artical{
+    width: 752px;
+    height: 1380px;
+    float: left;
+    padding-top: 20px;
+    background: white;
+    position: relative;
+}
+.first-word{
+    margin-left: 44px;
+    color: #ff5a00;
+}
+.second{
+    margin: 0 10px;
+}
+.artical p{
+    padding: 0 45px;
+    font-size: 16px;
+    line-height: 29px;
+    text-indent: 2em;
+    float: left;
+}
+.artical h2{
+    width: 666px;
+    line-height: 27px;
+    background: #84ccc9;
+    float: left;
+    margin-left: 44px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #111;
+}
+.sAul{
+    width: 700px;
+    height: 200px;
+    margin-left: 40px;
+}
+.sAul li{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 15px;
+}
+.sAul li img{
+    width: 200px;
+    height: 200px;
+}
+.Aul li{
+    float: right;
+    margin: 8px 8px;
+}
+.Aul>li:nth-child(1){
+    margin-right: 25px;
+}
+.second-pic{
+    width: 223px;
+    height: 1400px;
+    float: right;
+    position: relative;
+    background: white;
+}
+.views{
+    width: 223px;
+    height: 1400px;
+    margin-top: 24px;
+    position: absolute;
+}
+.views li{
+    width: 223px;
+    height: 150px;
+    float: right;
+    margin-bottom:19px ;
+}
+.views li img{
+    width: 223px;
+    height: 160px;
+}
+.number{
+    width: 110px;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+    left:326px;
+}
+.number span{
+    width: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-right:5px;
+    text-align: center;
+    float: left;
+    display: block;
+    cursor: pointer;
+    text-decoration:underline;
+}
+.number .next{
+    width: 50px;
+}
+.bottom{
+    width: 1000px;
+    height: 60px;
+    background: white;
+    padding-top:10px ;
+}
+.bottom>div{
+    width: 350px;
+    line-height: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+.back_top{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+}
+.back_top img{
+    width: 40px;
+    height: 40px;
+}

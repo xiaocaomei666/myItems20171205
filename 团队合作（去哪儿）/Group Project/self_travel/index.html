@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .current{
+            position: absolute;
+            background: white;
+            top: 38px;
+            width: 400px;
+            left: 1px;
+            box-sizing: border-box;
+            padding: 10px;
+
+        }
+        /*.current .currentLi{*/
+        /*background: #666666;*/
+        /*}*/
+        .current>li{
+            cursor: pointer;
+        }
+        .current>li:hover{
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery.suggestion.js"></script>
+
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="top">
+    <div class="topT">
+        <span>去旅游，到这儿！</span>
+        <div class="topV">
+            <a href="../login.html">登录</a>|
+            <a href="../reg.html">注册</a>
+        </div>
+    </div>
+    <div class="topB">
+        <div class="topB_L">
+            <img src="images/Dlogo.png" alt=""/>
+            <div class="topB_Lv">
+                <a href="#">首页</a>><a href="#">旅游</a>><a href="#">景点介绍</a>
+            </div>
+        </div>
+        <div class="topB_R">
+            <div class="topB_Rv">
+                <a href="../index.html">首页</a>|<a href="../旅游吧/tourism.html" class="topB_a">旅游</a>|<a href="../strategy/strategy.html">攻略</a>|<a href="../login.html">个人中心</a>
+            </div>
+            <div class="topB_Rserch">
+                <form action="http://www.baidu.com/s"  target="_blank">
+                    <input type="text" placeholder="景点名或城市名" class="input-text" name="word"/>
+                    <span><a href="#"><img src="images/Dserch.png" alt=""/></a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="centre">
+    <div class="centre_c1"></div>
+    <div class="centre_c2">
+        <div id="centre_c2K">
+            <span class="centre_c2L" id="LS">&lt;</span>
+            <span class="centre_c2R" id="RS">&gt;</span>
+        </div>
+    </div>
+    <div class="centre_c3">
+        <span>云  南</span>
+    </div>
+    <div>
+        <ul id="slide">
+            <li style="background: url('images/Dcen/a丽江.png')" ><img src="images/Dcen/1丽江.png" class="imgs"/><span class="span1">国中贵元</span><span class="span2">云中丽江</span></li>
+            <li style="background: url('images/Dcen/b大理.png')"><img src="images/Dcen/3大理.png" class="imgs"/><span class="span1">国中贵元</span><span class="span2">云中丽江</span></li>
+            <li style="background: url('images/Dcen/c西双版纳.png')"><img src="images/Dcen/5西双版纳.png" class="imgs"/><span class="span1">国中贵元</span><span class="span2">云中丽江</span></li>
+            <li style="background: url('images/Dcen/d香格里拉.png')"><img src="images/Dcen/7香格里拉.png" class="imgs"/><span class="span1">国中贵元</span><span class="span2">云中丽江</span></li>
+        </ul>
+    </div>
+</div>
+<div class="bottom1">
+    <div class="bottom1_T">
+        <h3>丽江</h3>
+    </div>
+    <div class="bottom1_C">
+        <div id="bottom1_CK">
+            <span class="bottom_Cspan1">&lt;</span>
+            <span class="bottom_Cspan2">&gt;</span>
+        </div>
+        <ul class="uls">
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%CA%F8%BA%D3%B9%C5%D5%F2&p=40230500&st=255&mode=255"><img
+                    src="images/D丽江/1束河古镇图.png" alt=""/></a>
+                <div><span>束河古镇</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C4%C9%CE%F7%B9%C5%C0%D6%CD%BC%C6%AC&bh=1&w=05002600"><img
+                    src="images/D丽江/2纳西古乐图.png" alt=""/></a>
+                <div><span>纳西古乐</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C4%C9%CE%F7%B9%C5%C0%D6%CD%BC%C6%AC&bh=1&w=05002600"><img
+                    src="images/D丽江/3玉龙雪山.png" alt=""/></a>
+                <div><span>玉龙雪山</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C0%AD%CA%D0%BA%A3&p=40230500&st=255&mode=255"><img
+                    src="images/D丽江/4拉市海.png" alt=""/></a>
+                <div><span>拉市海</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B0%D7%C9%B3%B9%C5%D5%F2&p=40230500&st=255&mode=255
+"><img
+                    src="images/D丽江/5白沙古镇.png" alt=""/></a>
+                <div><span>白沙古镇</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%BB%A2%CC%F8%CF%BF&p=40230500&st=255&mode=255
+"><img
+                    src="images/D丽江/6虎跳峡.png" alt=""/></a>
+                <div><span>虎跳峡</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B3%A4%BD%AD%B5%DA%D2%BB%CD%E5&p=40230500&st=255&mode=255"><img
+                    src="images/D丽江/7长江第一湾.png" alt=""/></a>
+                <div><span>长江第一湾</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?ie=utf8&p=40230504&interV=kKIOkrELjb8TkKIMkLELjbgNmLkEkLsTkKIMkbELjbgQmLkElbcTkKILmrELjbgRmLkEkLY=_1059932802&query=老君山云南&"><img
+                    src="images/D丽江/8老君山.png" alt=""/></a>
+                <div><span>老君山</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C7%A7%B9%EA%C9%BD&p=40230500&st=255&mode=255"><img
+                    src="images/D丽江/9千龟山.png" alt=""/></a>
+                <div><span>千龟山</span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom1_B">
+        <span>丽江古城是一座没有城墙的古城，它依山傍水，风景秀丽。古城内光滑的石板路、手工建造的
+土木架构房屋、无处不在的小桥流水，无一不在向世人展示着它的恬静清幽。浓烈的人文气息，
+丰富的名族文化，加上艳丽的自然风光，慵懒的生活节奏，使得人们来了就不忍离去。</span>
+        <span> 丽江古城又名大研镇，是中国两个没有城墙的古城之一。据说是因为丽江世袭统治者姓木，筑
+起城墙就像木字加框而成“困”字一样，故不设城墙。古城历经800年风雨而保存完好，与四川阆
+中、山西平遥、安徽歙县并称为“保存最为完好的四大古城”。</span>
+    </div>
+</div>
+<div class="bottom2">
+    <div class="bottom2_T">
+        <h3>大理</h3>
+    </div>
+    <div class="bottom2_C">
+        <div id="bottom2_CK">
+            <span class="bottom_Cspan3">&lt;</span>
+            <span class="bottom_Cspan4">&gt;</span>
+        </div>
+        <ul class="uls1">
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%CF%B2%D6%DE&p=40230500&st=255&mode=255"><img
+                    src="images/D大理/1喜洲.png" alt=""/></a>
+                <div><span>喜洲</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%CD%DA%C9%AB%D5%F2&p=40230500&st=255&mode=255"><img
+                    src="images/D大理/2挖色镇.png" alt=""/></a>
+                <div><span>挖色镇</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%CC%EC%C1%FA%B0%CB%B2%BF%D3%B0%CA%D3%B3%C7&p=40230500&st=255&mode=2550"><img
+                    src="images/D大理/3天龙八部影视城.png" alt=""/></a>
+                <div><span>天龙八部影视城</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B2%D4%C9%BD%B6%FD%BA%A3&bh=1&w=05002600"><img
+                    src="images/D大理/4苍山洱海.png" alt=""/></a>
+                <div><span>苍山洱海</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%BD%A3%B4%A8%D6%D3%C9%BD%CA%AF%CA%AF%BF%DF&p=40230500&st=255&mode=255"><img
+                    src="images/D大理/5剑川钟山石石窟.png" alt=""/></a>
+                <div><span>剑川钟山石石窟</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B3%E7%CA%A5%CB%C2%C8%FD%CB%FE&p=40230500&st=255&mode=255
+"><img
+                    src="images/D大理/6崇圣寺三塔.png" alt=""/></a>
+                <div><span>崇圣寺三塔</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C4%CF%DA%AF%B7%E7%C7%E9%B5%BA&p=40230500&st=255&mode=255"><img
+                    src="images/D大理/7南诏风情岛.png" alt=""/></a>
+                <div><span>南诏风情岛</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B4%F3%C0%ED%D1%F3%C8%CB%BD%D6&di=2&_asf=pic.sogou.com&w=05009900&sut=2038&sst0=1471425511845"><img
+                    src="images/D大理/8洋人街.png" alt=""/></a>
+                <div><span>洋人街</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C7%A7%B9%EA%C9%BD&p=40230500&st=255&mode=255"><img
+                    src="images/D丽江/9千龟山.png" alt=""/></a>
+                <div><span>千龟山</span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom2_B">
+        <span>苍山之麓，洱海之滨，南诏古国，佛道胜地苍山之麓，洱海之滨，南诏古国，佛道胜地，"风花雪月"的大理历史悠久、山川秀丽，苍山洱海珠联璧合，文明古都极具神韵，自然风光秀丽迷人，民族风情多姿多彩。大理位于云南省中部偏西，总面积29459平方公里，地域辽阔，资源丰富，山川秀丽，四季如
+春，是一块宝地。</span>
+        <span>大理州境内的南诏崇圣寺三塔，剑川石宝山石窟，宾川佛教圣地鸡足山，以及挺拔雄
+伟的苍山，明媚清澈的洱海，蝴蝶泉的湖光山色，构成了一幅美丽而又神奇的画卷。大理
+以其秀丽的自然风光，丰富的文物古迹，优美的民族风情为特色而闻名遐迩，吸引着无数
+中外游客。</span>
+    </div>
+</div>
+<div class="bottom3">
+    <div class="bottom3_T">
+        <h3>西双版纳</h3>
+    </div>
+    <div class="bottom3_C">
+        <div id="bottom3_CK">
+            <span class="bottom_Cspan5">&lt;</span>
+            <span class="bottom_Cspan6">&gt;</span>
+        </div>
+        <ul class="uls2">
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%D4%AD%CA%BC%C9%AD%C1%D6%B9%AB%D4%B0&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/1原始森林公园.png" alt=""/></a>
+                <div><span>原始森林公园</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%BE%B0%BA%E9%D7%DC%B7%F0%CB%C2&p=40230500&st=255&mode=2555"><img
+                    src="images/D西双版纳/2景洪总佛寺.png" alt=""/></a>
+                <div><span>景洪总佛寺</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%DB%C2%C2%D8%D6%B2%CE%EF%D4%B0&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/3勐仑植物园.png" alt=""/></a>
+                <div><span>勐仑植物园</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%D2%B0%CF%F3%B9%C8&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/4野象谷.png" alt=""/></a>
+                <div><span>野象谷</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%B4%F6%D7%E5%D4%B0&p=40230500&st=255&mode=2555"><img
+                    src="images/D西双版纳/5傣族园.png" alt=""/></a>
+                <div><span>傣族园</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%C2%FC%CC%FD%B9%AB%D4%B0&p=40230500&st=255&mode=255
+"><img
+                    src="images/D西双版纳/6曼听公园.png" alt=""/></a>
+                <div><span>曼听公园</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%D4%C6%C4%CF%BB%F9%C5%B5%C9%BD%D5%AF&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/7基诺山寨.png" alt=""/></a>
+                <div><span>基诺山寨</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%BE%B0%D5%E6%B0%CB%BD%C7%CD%A4&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/8景真八角亭.png" alt=""/></a>
+                <div><span>景真八角亭</span></div>
+            </li>
+            <li class="lis"><a href="http://pic.sogou.com/pics?query=%CD%FB%CC%EC%CA%F7&p=40230500&st=255&mode=255"><img
+                    src="images/D西双版纳/9.望天树.png" alt=""/></a>
+                <div><span>望天树</span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom3_B">
+        <span>理想而神奇的乐土 西双版纳位于云南的南端，与老挝、缅甸山水相连，与泰国、越南近邻，土地面积近2万平方公里，国境线长966公里。 她美丽、富饶、神奇、犹如一颗璀璨的明珠镶嵌
+在祖国西南的边疆。澜沧江纵贯南北，出境后称湄公河，流经缅、老、泰、柬、越5国
+后汇入太平洋，誉称为"东方多瑙河"。因此，西双版纳既是面向东南亚、南亚的重要通
+道和基地，也是云南对外开放的窗口。西双版纳辖景洪市、勐海县、勐腊县和11个国营
+农场。这里聚居着傣、哈尼、拉祜、布朗、基诺等13个少数民族，占全州人口的74%。
+</span>
+    </div>
+</div>
+<div class="bottom4">
+    <div class="bottom4_T">
+        <h3>其他景点</h3>
+    </div>
+    <div class="bottom4_C">
+        <ul class="uls3">
+            <li class="lis2"><a href="http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=%E6%A2%85%E9%87%8C%E9%9B%AA%E5%B1%B1"><img
+                    src="images/D其他景点/1梅里雪山.png" alt=""/></a>
+                <div><span>梅里雪山</span></div>
+            </li>
+            <li class="lis2"><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1504513261916_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1504513261916%5E00_1349X638&word=%E6%9D%BE%E8%B5%9E%E6%9E%97%E5%AF%BA"><img
+                    src="images/D其他景点/2松赞林寺.png" alt=""/></a>
+                <div><span>松赞林寺</span></div>
+            </li>
+            <li class="lis2"><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1504513288326_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1504513288326%5E00_1349X638&word=%E9%9B%A8%E5%B4%A9%E5%86%B0%E6%B9%96"><img
+                    src="images/D其他景点/3雨崩冰湖.png" alt=""/></a>
+                <div><span>雨崩冰湖</span></div>
+            </li>
+            <li class="lis"><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1504513318718_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1504513318718%5E00_1349X638&word=%E9%9B%A8%E5%B4%A9%E6%9D%91"><img
+                    src="images/D其他景点/4雨崩村.png" alt=""/></a>
+                <div><span>雨崩村</span></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bottom5">
+    <div class="bottom5_T">
+        <h3>当季热销</h3>
+    </div>
+    <div class="bottom5_C" id="bottom5_C">
+        <ul class="uls4">
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/1.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/2.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/3.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/4.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/5.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/6.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/7.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/8.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/1.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/2.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/3.jpg" alt=""/></a>
+            </li>
+            <li class="lis1"><a href="javascript:"><img
+                    src="images/D热门推荐/4.jpg" alt=""/></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bottom6">
+    <div>
+        <a href="javascript;">联系我们</a>|
+        <a href="javascript;">免责声明</a>|
+        <a href="javascript;">意见反馈</a>|
+        <a href="javascript;">旅行社加盟</a>
+    </div>
+</div>
+<div class="back_top">
+    <img src="images/time.bmp" alt=""/>
+</div>
+</body>
+</html>

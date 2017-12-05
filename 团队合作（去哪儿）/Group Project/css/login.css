@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 1365px 638px;
+
+}
+
+.mask {
+    width: 900px;
+    height: 638px;
+    margin: 0 auto;
+}
+
+.mask .top {
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    position: relative;
+}
+
+.mask .top > span {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+}
+
+.mask .top > ul {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+}
+
+.mask .top > ul > li {
+    width: 60px;
+    float: left;
+    border-right: 1px solid #999;
+    font-size: 12px;
+    text-align: center;
+}
+.mask .top > ul > li>a{
+    color: #333;
+}
+.mask .top > ul > li:last-child {
+    border-right: none;
+}
+
+.mask .content {
+    background: rgba(255, 255, 255, .6);
+    width: 100%;
+    height: 538px;
+    overflow: hidden;
+}
+
+.mask .content .logo {
+    margin-top: 30px;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.mask .content .logo img {
+    height: 100px;
+}
+
+.mask .content .login {
+    height: 418px;
+    width: 450px;
+    background: rgba(255, 255, 255, .8);
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mask .content .login .radio {
+    width: 350px;
+    height: 50px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+.mask .content .login .radio input {
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.mask .content .login .radio span {
+    text-indent: 5px;
+    font-size: 20px;
+    float: left;
+}
+
+.mask .content .login .account {
+    width: 306px;
+    height: 42px;
+    margin: 34px auto;
+    background: #fff;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mask .content .login .account span {
+    float: left;
+    background: url("../images/account.png") no-repeat center center;
+    width: 34px;
+    height: 30px;
+    border-right: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.mask .content .login .account input {
+    float: left;
+    width: 270px;
+    height: 30px;
+    border: none;
+    text-indent: 10px;
+    font-size: 18px;
+    outline: none;
+    color: #999;
+}
+
+.mask .content .login .pwd {
+    width: 306px;
+    height: 42px;
+    margin: 34px auto;
+    background: #fff;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mask .content .login .pwd span {
+    float: left;
+    background: url("../images/pwd.png") no-repeat center center;
+    width: 34px;
+    height: 30px;
+    border-right: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.mask .content .login .pwd input {
+    float: left;
+    width: 270px;
+    height: 30px;
+    border: none;
+    text-indent: 10px;
+    font-size: 18px;
+    color: #999;
+    outline: none;
+
+}
+
+.mask .content .login .btn {
+    display: inline-block;
+    width: 306px;
+    height: 30px;
+    background: url("../images/login.png");
+    margin: 0 auto;
+    line-height: 30px;
+    /*text-align: center;*/
+}
+
+.mask .content .login .btn span {
+    color: #fff;
+    position: relative;
+}
+
+.mask .content .login .btn span:first-child {
+    left: -20px;
+}
+
+.mask .content .login .btn span:last-child {
+    left: 20px;
+}
+
+.mask .content .login > .register {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.mask .content .login > .register > a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+.mask .content .login .other {
+    color: blue;
+    font-size: 12px;
+    margin-left: 10px;
+    position: relative;
+    left: -120px;
+    top: 10px;
+}
+
+.mask .content .login ul {
+    margin: 20px auto;
+    width: 100%;
+
+}
+
+.mask .content .login ul li:nth-child(1) {
+    margin-left: 80px;
+    line-height: 26px;
+}
+
+.mask .content .login ul li {
+    float: left;
+    margin-right: 40px;
+    line-height: 26px;
+
+}
+
+.mask .content .login ul li img {
+    margin-right: 10px;
+}
+
+.mask .content .login ul li span {
+    position: relative;
+    bottom: 10px;
+}
+
+.mask .content .login ul li:nth-child(2) span {
+    bottom: 3px;
+}
+
+.mask .content .login ul li:nth-child(3) span {
+    bottom: 5px;
+}
+
+.mask .bottom {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, .5);
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.mask .bottom > ul {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.mask .bottom > ul > li {
+    cursor: pointer;
+    float: left;
+    border-right: 1px solid #333;
+    font-size: 14px;
+    color: white;
+    width: 80px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.mask .bottom > ul > li:last-child {
+    border-right: none;
+}
+
+.resister_mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+
+.resister_mask .resister_content {
+    margin: 150px auto;
+    width: 300px;
+    height: 350px;
+    background: yellowgreen;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.resister_mask .resister_content input {
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    outline: none;
+    text-indent: 10px;
+}
+
+.resister_mask .resister_content div {
+    background: url("../images/login.png");
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    margin-top: 20px;
+}
+
+.success {
+    font-size: 20px;
+    color: red;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 199;
+    background: yellow;
+    text-align: center;
+    line-height: 100px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
