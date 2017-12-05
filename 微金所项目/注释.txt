@@ -1,0 +1,6 @@
+该项目适配在PC端、平板、移动端和手机端，具有响应式的功能；
+框架：
+bootstrap
+html5shiv
+jquery
+responsd
